@@ -1,0 +1,17 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+:root {
+	--dark-greenish-gray: #1a2a33;
+}
+
+body {
+	margin: 0;
+	background-color: var(--dark-greenish-gray);
+	color: white;
+	font-family: "Outfit", sans-serif;
+}
+
+.main-section {
+	padding: 7%;
+}

@@ -1,0 +1,17 @@
+/** @format */
+
+.root-container {
+	height: 100dvh;
+}
+
+/* generic classes */
+.flex-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.y-flex-wrapper {
+	flex-direction: column;
+}

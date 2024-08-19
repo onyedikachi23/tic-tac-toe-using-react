@@ -1,0 +1,12 @@
+/** @format */
+
+.game-intro-container {
+	display: flex;
+}
+
+.pick-player-card h1 {
+	margin: 0;
+}
+
+.game-start-btns-container.flex-wrapper {
+}
