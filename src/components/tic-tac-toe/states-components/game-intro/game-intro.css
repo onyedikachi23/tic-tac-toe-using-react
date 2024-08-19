@@ -1,12 +1,97 @@
 /** @format */
 
-.game-intro-container {
-	display: flex;
+.game-intro-container.flex-wrapper {
+	gap: 2rem;
+}
+
+/* pick player card */
+.pick-player-card {
+	background-color: var(--1-dark-greenish-gray);
+	color: var(--1-whitish-blue);
+	padding: 1.7rem;
+	border-radius: 1rem;
+	width: 100%;
+	box-shadow: inset 0 -8px 0 #10212a;
 }
 
 .pick-player-card h1 {
 	margin: 0;
+	font-size: 1rem;
+	letter-spacing: 1px;
 }
 
-.game-start-btns-container.flex-wrapper {
+.pick-player-card p {
+	margin: 0;
+	opacity: 0.5;
+}
+
+.player-choice-container {
+	position: relative;
+	background-color: var(--2-dark-greenish-gray);
+	width: 100%;
+	height: 4.5rem;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+}
+
+.player-choice-container.flex-wrapper {
+	justify-content: space-between;
+	gap: 0;
+}
+
+.player-choice-label {
+	flex: 1;
+	border-radius: 0.6rem;
+	max-height: 100%;
+	cursor: pointer;
+}
+
+.player-choice-label.selected {
+	background-color: var(--1-whitish-blue);
+}
+
+.player-choice-input {
+	display: none;
+}
+
+.player-icon-svg {
+	transform: scale(0.5);
+	transform-origin: center center;
+}
+
+.player-icon-svg path {
+	fill: #a8bfc9;
+}
+
+.player-choice-label.selected .player-icon-svg path {
+	fill: #1a2a33;
+}
+
+/* end of player card */
+
+/* game start buttons */
+
+.game-start-btns-container {
+	width: 100%;
+}
+
+.game-start-btns-container button {
+	width: 100%;
+	height: 3.5rem;
+	border-radius: 1rem;
+	font-size: 1rem;
+	font-weight: bold;
+	border: none;
+	color: var(--blackish-blue);
+	cursor: pointer;
+}
+
+.cpu-start-btn {
+	background: var(--golden-yellow);
+	box-shadow: inset 0 -8px 0 #cc8b13;
+}
+
+.player-start-btn {
+	background: var(--light-blueish-green);
+	box-shadow: inset 0 -8px 0 #118c87;
 }

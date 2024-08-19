@@ -2,16 +2,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 :root {
-	--dark-greenish-gray: #1a2a33;
+	--2-dark-greenish-gray: #1a2a33;
+	--1-dark-greenish-gray: #1f3641;
+	--1-whitish-blue: #a8bfc9;
+	--golden-yellow: #f2b137;
+	--blackish-blue: #1a2a33;
+	--light-blueish-green: #31c3bd;
 }
 
 body {
 	margin: 0;
-	background-color: var(--dark-greenish-gray);
+	background-color: var(--2-dark-greenish-gray);
 	color: white;
 	font-family: "Outfit", sans-serif;
 }
 
 .main-section {
-	padding: 7%;
+	padding: 0 7%;
 }
