@@ -1,0 +1,9 @@
+/** @format */
+
+:is(.game-header-container, .turn-notifier).flex-wrapper {
+	justify-content: space-between;
+}
+
+.turn-notifier .player-icon-svg {
+	transform: scale(0.5) translate(-50%);
+}

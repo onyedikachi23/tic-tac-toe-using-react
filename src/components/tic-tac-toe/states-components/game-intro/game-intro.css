@@ -1,5 +1,9 @@
 /** @format */
 
+.game-intro-container {
+	height: 100dvh;
+}
+
 .game-intro-container.flex-wrapper {
 	gap: 2rem;
 }

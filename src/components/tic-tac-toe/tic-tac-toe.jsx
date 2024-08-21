@@ -3,19 +3,23 @@
 import { useReducer } from "react";
 import GameIntro from "./states-components/game-intro/game-intro";
 import "./tic-tac-toe.css";
-import gameStatusReducer from "./reducers/game-status-reducer";
+import GameStatusProvider, {
+	gameStatusReducer,
+	useGameStatus,
+} from "./game-status-providers/game-status-context-provider";
+import GamePlay from "./states-components/game-play/game-play";
 
 export default function TicTacToe() {
 	const [gameStatus, updateGameStatus] = useReducer(gameStatusReducer, {
-		type: null,
+		type: "gameIntro", // default value
 	});
 
 	return (
-		<div>
-			{gameStatus.type === "initialGameStart" && (
-				<h1>First game start</h1>
-			)}
-			<GameIntro startGameHandler={updateGameStatus} />
-		</div>
+		// GameStatusProvider provides the gameStatus state and its update function using context API to all nested components
+		<GameStatusProvider
+			gameStatus={gameStatus}
+			updateGameStatus={updateGameStatus}>
+			{gameStatus.type === "gameIntro" ? <GameIntro /> : <GamePlay />}
+		</GameStatusProvider>
 	);
 }

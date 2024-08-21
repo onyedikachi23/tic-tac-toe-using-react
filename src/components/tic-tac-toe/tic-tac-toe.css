@@ -1,7 +1,6 @@
 /** @format */
 
 .root-container {
-	height: 100dvh;
 }
 
 /* generic classes */
@@ -17,5 +16,9 @@
 }
 
 .border-box-sizing {
-    box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.smoothly-transitioned {
+	transition: all 0.25s ease-in-out;
 }

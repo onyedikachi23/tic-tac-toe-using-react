@@ -7,8 +7,6 @@ export default function PickPlayerCard() {
 	const defaultPlayerRef = useRef(null);
 
 	function handleSetPlayer(event) {
-		console.log("onChange");
-
 		setSelectedPlayer(event.target.id);
 	}
 
@@ -18,15 +16,12 @@ export default function PickPlayerCard() {
 		setSelectedPlayer(defaultPlayerRef.current.id);
 	}, []);
 
-	console.log(selectedPlayer);
-	console.log(defaultPlayerRef);
-
 	return (
 		<div className="pick-player-card flex-wrapper y-flex-wrapper border-box-sizing">
 			<h1>PICK PLAYER 1'S MARK</h1>
 			<div className="player-choice-container flex-wrapper border-box-sizing">
 				<label
-					className={`player-choice-label border-box-sizing flex-wrapper ${
+					className={`player-choice-label border-box-sizing flex-wrapper smoothly-transitioned ${
 						selectedPlayer === "x-player" ? "selected" : ""
 					}`}
 					htmlFor="x-player">
@@ -51,7 +46,7 @@ export default function PickPlayerCard() {
 					</svg>
 				</label>
 				<label
-					className={`player-choice-label border-box-sizing flex-wrapper ${
+					className={`player-choice-label border-box-sizing flex-wrapper smoothly-transitioned ${
 						selectedPlayer === "o-player" ? "selected" : ""
 					}`}
 					htmlFor="o-player">
